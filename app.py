@@ -2,8 +2,8 @@
 # CABECERA
 # ============================================================
 # Alumno: Valentina
-# URL Streamlit Cloud: https://...streamlit.app
-# URL GitHub: https://github.com/...
+# URL Streamlit Cloud: https://omda14bc5-ggsemspkwwwykw3cnvbpyf.streamlit.app/
+# URL GitHub: https://github.com/vsupino-bot/OMDA14_BC5
 
 # ============================================================
 # IMPORTS
@@ -380,7 +380,7 @@ if prompt := st.chat_input("Ej: ¿Cuál es mi artista más escuchado?"):
             except json.JSONDecodeError:
                 st.error("No he podido interpretar la respuesta. Intenta reformular la pregunta.")
             except Exception as e:
-                st.error("Ha ocurrido un error al generar la visualización. Intenta reformular la pregunta.")
+                st.error(f"ERROR REAL: {e}")
 
 
 # ============================================================
