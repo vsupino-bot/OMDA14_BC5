@@ -1,7 +1,7 @@
 # ============================================================
 # CABECERA
 # ============================================================
-# Alumno: Nombre Apellido
+# Alumno: Valentina
 # URL Streamlit Cloud: https://...streamlit.app
 # URL GitHub: https://github.com/...
 
@@ -121,7 +121,17 @@ El código generado debe:
 - Crear siempre la visualización final en una variable llamada `fig`.
 - No utilizar `fig.show()` ni ningún método que abra la visualización en una ventana externa. Solo debes crear y asignar el gráfico a la variable `fig`; la aplicación Streamlit se encargará de mostrarlo.
 - Incluir títulos y etiquetas de ejes claros y legibles.
-- Elegir el tipo de gráfico adecuado para la pregunta: barras para rankings y comparaciones categóricas, líneas para evolución temporal y otros gráficos solo cuando sean más apropiados.
+- Elegir el tipo de gráfico según el objetivo del análisis:
+  - Rankings de artistas, canciones o plataformas: utilizar barras horizontales, ordenadas de mayor a menor, para facilitar la lectura de los nombres.
+  - Evoluciones temporales: utilizar gráficos de línea y respetar siempre el orden cronológico.
+  - Comparaciones entre pocas categorías, como semana vs. fin de semana o shuffle vs. orden: utilizar barras.
+  - Comparaciones de rankings entre períodos, como verano vs. invierno o primer vs. segundo semestre: utilizar barras agrupadas que permitan comparar ambos períodos.
+  - Si el resultado es un único valor o KPI, evitar crear una barra artificial; generar una visualización simple y apropiada que destaque el valor.
+- En análisis mensuales, mostrar los meses con sus nombres en español (Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre y Diciembre) y mantener siempre el orden cronológico.
+- Utilizar títulos descriptivos y breves en español.
+- Utilizar etiquetas de ejes comprensibles para el usuario y evitar nombres técnicos de columnas como `horas_escuchadas`, `es_fin_semana` o `ms_played` en la visualización final.
+- Redondear horas, minutos y porcentajes a un máximo de dos decimales cuando se muestren al usuario.
+- Mantener los gráficos limpios y legibles, evitando información visual innecesaria.
 - No leer archivos, no acceder a internet, no utilizar APIs externas y no modificar archivos del sistema.
 - No inventar datos ni columnas.
 
